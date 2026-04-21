@@ -8,20 +8,25 @@
 
 set -euo pipefail
 
+# Where files live post-install; BIN_DIR must already be in the user's PATH.
 REPO_RAW="https://raw.githubusercontent.com/dongminlee94/ccnav/main"
 INSTALL_DIR="$HOME/.local/share/ccnav"
 BIN_DIR="$HOME/.local/bin"
 
 echo "==> Installing ccnav"
 
+# curl is the only hard dependency of the installer itself.
 command -v curl >/dev/null 2>&1 || { echo "error: curl is required." >&2; exit 1; }
 
+# Create both directories idempotently.
 mkdir -p "$INSTALL_DIR" "$BIN_DIR"
 
+# Download the two source files into the install directory.
 curl -fsSL "$REPO_RAW/sessions.py" -o "$INSTALL_DIR/sessions.py"
 curl -fsSL "$REPO_RAW/ccnav.sh" -o "$INSTALL_DIR/ccnav.sh"
 chmod +x "$INSTALL_DIR/ccnav.sh"
 
+# Create (or refresh) the PATH entry pointing into the install directory.
 ln -sf "$INSTALL_DIR/ccnav.sh" "$BIN_DIR/ccnav"
 
 echo "==> Installed to $BIN_DIR/ccnav"
