@@ -16,7 +16,7 @@ Browse, preview, and resume past conversations from anywhere.
 - Linux or macOS
 - [Claude Code](https://claude.com/claude-code) CLI (`claude` in `PATH`)
 - [fzf](https://github.com/junegunn/fzf) 0.31+
-- Python 3.10+
+- Python 3.9+
 
 ## Install
 
