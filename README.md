@@ -34,13 +34,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 Prefer to inspect the installer first? See [install.sh](install.sh).
 
-### Uninstall
-
-```bash
-rm ~/.local/bin/ccnav
-rm -rf ~/.local/share/ccnav
-```
-
 ## Usage
 
 ```bash
