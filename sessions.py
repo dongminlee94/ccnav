@@ -524,11 +524,11 @@ def _scan_session_full(file_path: Path) -> dict[str, Any]:
                 # tool_result-only user entries have no text and don't count as turns.
                 message = data.get("message", {})
                 text = _extract_text(message.get("content")) if isinstance(message, dict) else ""
-                
+
                 if text:
                     result["user_turns"] += 1
                     result["last_user_text"] = text
-                    
+
                     if not result["display"]:
                         result["display"] = text
 
@@ -540,7 +540,7 @@ def _scan_session_full(file_path: Path) -> dict[str, Any]:
             elif message_type == "assistant":
                 # Assistant turns do not affect display but bracket the session duration.
                 result["assistant_turns"] += 1
-                
+
                 if timestamp:
                     if not result["first_timestamp"]:
                         result["first_timestamp"] = timestamp
