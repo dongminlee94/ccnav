@@ -3,6 +3,10 @@
 A fast fzf picker for Claude Code sessions.  
 Browse, preview, and resume past conversations from anywhere.
 
+<p align="center">
+  <img src="assets/demo.png" alt="ccnav demo" width="1000">
+</p>
+
 ## Features
 
 - **Cross-project view** — browse every Claude Code session in one picker, not just the current directory
