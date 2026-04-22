@@ -4,7 +4,7 @@ A fast fzf picker for Claude Code sessions.
 Browse, preview, and resume past conversations from anywhere.
 
 <p align="center">
-  <img src="assets/demo.png" alt="ccnav demo" width="700">
+  <img src="assets/demo.png" alt="ccnav demo" width="800">
 </p>
 
 ## Features
